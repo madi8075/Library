@@ -22,7 +22,7 @@ class Library {
         void displayAllPatrons() const;
 
         // Look up either book or patron
-        Book* findBooksByISBN(const std::string& isbn);
+        Book* findBookByISBN(const std::string& isbn);
         Patron* findPatronByID(const std::string& id);
 
         // Methods for changing available status
