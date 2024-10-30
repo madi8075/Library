@@ -14,7 +14,7 @@ class Book {
 
     public:
         // Constructor
-        Book(std::string title, std::string author, std::string ISBN);
+        Book(std::string t, std::string a, std::string isbn);
 
         //Display method
         void display() const;
