@@ -5,6 +5,7 @@
 Book::Book(std::string t, std::string a, std::string isbn)
     : title(t), author(a), ISBN(isbn), isAvailable(true) {}
 
+// Print out all book info
 void Book::display() const{
     std::cout   << "Title: " << title << "\n"
                 << "Author: " << author << "\n"
@@ -12,6 +13,7 @@ void Book::display() const{
                 << "Available: " << (isAvailable ? "Yes" : "No") << std::endl;
 }
 
+// change isavailable flag
 void Book::borrowBook() {
     if(isAvailable) {
         isAvailable = false;
@@ -21,6 +23,7 @@ void Book::borrowBook() {
     }
 }
 
+// change isavailable flag back when a patron returns a book
 void Book::returnBook() {
     if(!isAvailable) {
         isAvailable = true;
@@ -30,14 +33,17 @@ void Book::returnBook() {
     }
 }
 
+// Return the availability of the book
 bool Book::getAvailability() const {
     return isAvailable;
 }
 
+// Return ISBN of book
 std::string Book::getISBN() const {
     return ISBN;
 }
 
+// Overload operator to print out info
 std::ostream& operator<<(std::ostream& os, const Book& book) {
     os  << "Title: " << book.title << "\n"
         << "Author: " << book.author << "\n"
