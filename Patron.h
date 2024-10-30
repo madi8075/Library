@@ -18,13 +18,13 @@ class Patron {
 
     public:
         // Patron Constructor
-        Patron(std::string name, std::string id);
+        Patron(std::string n, std::string id);
 
         // Methods
         void display() const;
         void borrowBook(Book& book);
         void returnBook(Book& book);
-        void getPatronID() const;
+        std::string getPatronID() const;
 
         // Overload method
         friend std::ostream& operator<<(std::ostream& os, const Patron& patron);
